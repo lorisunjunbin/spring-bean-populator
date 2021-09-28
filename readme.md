@@ -24,18 +24,3 @@ http://localhost:8080/rest/refresh/demoWhatEverSpringBean
 
 http://localhost:8080/rest/refresh/all
 
-
-
-
-echo "# spring-bean-populator" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/lorisunjunbin/spring-bean-populator.git
-git push -u origin main
-…or push an existing repository from the command line
-
-git remote add origin https://github.com/lorisunjunbin/spring-bean-populator.git
-git branch -M main
-git push -u origin main
