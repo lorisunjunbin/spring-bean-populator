@@ -22,6 +22,10 @@ http://localhost:8080/rest/refresh/demoWhatEverSpringBean
 
 http://localhost:8080/rest/refresh/demoWhatEverSpringBeanOther
 
+http://localhost:8080/rest/refresh/demoController
+
+http://localhost:8080/rest/refresh/bingBangConfig
+
 #### refresh all
 
 http://localhost:8080/rest/refresh/all
