@@ -8,7 +8,7 @@ import javax.annotation.ManagedBean;
 @ManagedBean
 @Qualifier("bingBangConfig")
 @PopulatorCategory(codes = "BINGBANG", autoSync = true)
-public class BingBangConfig {
+public class DemoBingBangConfig {
     private String color;
     private String love2Eat;
     private String lovePlayWith;

@@ -21,8 +21,7 @@ public class DemoWhatEverSpringBeanOther {
 
     @PopulatorItem(categoryCode = "WHEN", code = "WHEN_2_GO", target = "itemDesc")
     private String when2Go;
-
-
+    
     @PopulatorItem
     private List<String> WHERE_2_GO;
 
