@@ -10,5 +10,6 @@ public class DemoResource implements PopulatorResource {
 
     private String itemCode;
     private String itemValue;
+    private String itemDesc;
 
 }

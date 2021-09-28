@@ -20,6 +20,8 @@ Refer to [Demo](./src/main/java/cn/lori/demo)
 
 http://localhost:8080/rest/refresh/demoWhatEverSpringBean
 
+http://localhost:8080/rest/refresh/demoWhatEverSpringBeanOther
+
 #### refresh all
 
 http://localhost:8080/rest/refresh/all
