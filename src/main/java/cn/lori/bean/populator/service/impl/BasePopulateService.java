@@ -86,7 +86,7 @@ public abstract class BasePopulateService implements PopulateService {
         return Try.of(() -> {
             getPopulatorCategoryCode(instance).stream()
                     .forEach(populatorCategoryCode ->
-                            this.cache.refresh(populatorCategoryCode)
+                            this.cache.invalidate(populatorCategoryCode)
                     );
             return populate(instance).get();
         });
@@ -117,7 +117,7 @@ public abstract class BasePopulateService implements PopulateService {
 
     @Override
     public Try<Void> refreshAll() {
-        this.cache.cleanUp();
+        this.cache.invalidateAll();
         return loadAll();
     }
 
@@ -300,7 +300,7 @@ public abstract class BasePopulateService implements PopulateService {
             return Lists.newArrayList(instance.getClass().getSimpleName());
 
         String[] codes = found.values().stream().findFirst().get().codes();
-        if (codes != null && codes.length > 0)
+        if (codes != null && codes.length > 0 && !codes[0].isEmpty())
             return Lists.newArrayList(codes);
 
         return Lists.newArrayList(found.keySet().stream().findFirst().get());
@@ -309,7 +309,7 @@ public abstract class BasePopulateService implements PopulateService {
 
     private LoadingCache<String, List<PopulatorResource>> initLoadingCache() {
         return CacheBuilder.newBuilder()
-                .refreshAfterWrite(5, TimeUnit.MINUTES)
+                .expireAfterAccess(5, TimeUnit.MINUTES)
                 .maximumSize(1000)
                 .build(new PopulatorCacheLoader());
     }
