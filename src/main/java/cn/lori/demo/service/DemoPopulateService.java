@@ -26,8 +26,17 @@ public class DemoPopulateService extends BasePopulateService {
             case "WHERE" -> getDummyWhere(categoryCode);
             case "WHY" -> getDummyWhy(categoryCode);
             case "BINGBANG" -> getDummyBingBang(categoryCode);
+            case "DemoSampleConfig" -> getDemoSampleConfig(categoryCode);
             default -> Lists.newArrayList();
         };
+    }
+
+    private List<PopulatorResource> getDemoSampleConfig(String categoryCode) {
+        return Lists.newArrayList(
+                new DemoResource("SETTING_1", "SETTING_1_VALUE", "SETTING_1_DESC"),
+                new DemoResource("SETTING_2", "SETTING_2_VALUE", "SETTING_2_DESC"),
+                new DemoResource("SETTING_3", "SETTING_3_VALUE", "SETTING_3_DESC" + System.currentTimeMillis())
+        );
     }
 
     private List<PopulatorResource> getDummyBingBang(String categoryCode) {
