@@ -26,6 +26,8 @@ http://localhost:8080/rest/refresh/demoController
 
 http://localhost:8080/rest/refresh/bingBangConfig
 
+http://localhost:8080/rest/refresh/demoSampleConfig
+
 #### refresh all
 
 http://localhost:8080/rest/refresh/all
